@@ -1,5 +1,5 @@
 FROM tomcat:8.5.28-jre8-alpine
-ENV JAVA_OPTS="-server -Xms512m -Xmx1024m -Dmidpoint.home=/var/opt/midpoint/ -Djavax.net.ssl.trustStore=/var/opt/midpoint/keystore.jceks -Djavax.net.ssl.trustStoreType=jceks"
+ENV JAVA_OPTS="-server -Xms512m -Xmx1024m -Dmidpoint.home=/var/opt/midpoint -Djavax.net.ssl.trustStore=/var/opt/midpoint/keystore.jceks -Djavax.net.ssl.trustStoreType=jceks"
 
 MAINTAINER mhandl@gmail.com
 
