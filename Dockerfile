@@ -14,7 +14,7 @@ RUN echo 'Extracting midPoint archive...' \
 && tar xzf midpoint-${version}-dist.tar.gz \
 && rm -f midpoint-${version}-dist.tar.gz
 
-RUN cp midpoint-${version}/war/midpoint.war /usr/local/tomcat/webapps \
+RUN cp midpoint-${version}/lib/midpoint.war /usr/local/tomcat/webapps \
 && rm -rf midpoint-${version}
 
 # Define data volumes
