@@ -8,11 +8,11 @@ ENV version 3.7
 RUN apk upgrade --update &&\
     apk add --no-cache bash wget
 
-RUN wget https://evolveum.com/downloads/midpoint/${version}/midpoint-${version}-dist.tar.bz2
+RUN wget https://evolveum.com/downloads/midpoint/${version}/midpoint-${version}-dist.tar.gz
 
 RUN echo 'Extracting midPoint archive...' \
-&& tar xjf midpoint-${version}-dist.tar.bz2 \
-&& rm -f midpoint-${version}-dist.tar.bz2
+&& tar xzf midpoint-${version}-dist.tar.gz \
+&& rm -f midpoint-${version}-dist.tar.gz
 
 RUN cp midpoint-${version}/war/midpoint.war /usr/local/tomcat/webapps \
 && rm -rf midpoint-${version}
