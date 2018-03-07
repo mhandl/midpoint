@@ -5,8 +5,8 @@ MAINTAINER mhandl@gmail.com
 
 ENV version 3.7
 
-RUN apt-get update \
-&& apt-get -y install wget
+RUN apk upgrade --update &&\
+    apk add --no-cache bash wget
 
 RUN wget https://evolveum.com/downloads/midpoint/${version}/midpoint-${version}-dist.tar.bz2
 
