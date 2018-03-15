@@ -3,7 +3,7 @@ ENV JAVA_OPTS="-server -Xms512m -Xmx1024m -Dmidpoint.home=/var/opt/midpoint -Dja
 
 MAINTAINER mhandl@gmail.com
 
-ENV version 3.7
+ENV version 3.7.1
 
 RUN apk upgrade --update &&\
     apk add --no-cache bash wget
